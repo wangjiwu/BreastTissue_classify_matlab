@@ -26,19 +26,30 @@ http://www.csie.ntu.edu.tw/~cjlin/libsvm/
 ```
 mex -setup
 ```
-若已经安装c++编译环境则会出现下面的情况，  （我已经安装过VS 2017了） **若提示没有c++编译环境则需要自己安装环境了，** 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190324201738734.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxODc0NDU1OTUz,size_16,color_FFFFFF,t_70)
-**直接点击用c++编译**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190324202257966.png)
+若已经安装c++编译环境则会出现下面的情况，  （我已经安装过VS 2017了） **若提示没有c++编译环境则需要自己安装环境了**  
+
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190324201738734.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxODc0NDU1OTUz,size_16,color_FFFFFF,t_70) 
+
+
+**直接点击用c++编译**  
+
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190324202257966.png)  
+
 
 
 ## 5. 源码编译
-打开当前目录下的make.m文件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190324202502455.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxODc0NDU1OTUz,size_16,color_FFFFFF,t_70)
+打开当前目录下的make.m文件  
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190324202502455.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxODc0NDU1OTUz,size_16,color_FFFFFF,t_70)  
+
 将其中所的**CFLAGS替换为COMPFLAGS**（替换运用CTRL+F即可），替换后执行make则可以编译成功。（这里我已经改完了， 一般没改的话 都是CFLAGS） **这里也就是以前教程忽略的一点，没有这一步将出现编译失败**
 
-编译完之后可以得到多出的这四个**后缀为mexw64文件**， 这说明我们已经完成安装了
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190324202744484.png)
+编译完之后可以得到多出的这四个**后缀为mexw64文件**， 这说明我们已经完成安装了  
+
+ ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190324202744484.png)  
+ 
 # 二， 使用libsvm进行分类
 
 
@@ -46,7 +57,8 @@ mex -setup
 
 这里给出了101个数据， 每一个数据都有9个特征和一个分类标签
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190324210014692.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190324210014692.png)  
+
 用这些数据来生成测试集和训练集， 得到模型并且测试，分类
 
 
